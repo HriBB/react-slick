@@ -1,7 +1,7 @@
 {
-  "name": "@mygooder/react-slick",
+  "name": "react-slick",
   "version": "0.15.4-0.0.2",
-  "description": " React port of slick carousel",
+  "description": "React port of slick carousel",
   "main": "./lib",
   "files": [
     "dist",
@@ -14,11 +14,11 @@
     "test:watch": "jest --watch",
     "lint": "eslint src"
   },
-  "author": "MyGooder",
+  "author": "HriBB",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mygooder/react-slick"
+    "url": "https://github.com/HriBB/react-slick"
   },
   "keywords": [
     "slick",
@@ -97,7 +97,7 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/mygooder/react-slick/issues"
+    "url": "https://github.com/HriBB/react-slick/issues"
   },
-  "homepage": "https://github.com/mygooder/react-slick"
+  "homepage": "https://github.com/HriBB/react-slick"
 }

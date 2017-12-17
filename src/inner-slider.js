@@ -24,7 +24,7 @@ import { PrevArrow, NextArrow } from './arrows';
 
 class InnerSlider extends Component {
   static defaultProps = defaultProps
-  
+
   constructor(props) {
     super(props)
     this.state = {
@@ -86,7 +86,7 @@ class InnerSlider extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.slickGoTo != nextProps.slickGoTo) {
+    if (this.props.slickGoTo !== nextProps.slickGoTo) {
       if (process.env.NODE_ENV !== 'production') {
         console.warn('react-slick deprecation warning: slickGoTo prop is deprecated and it will be removed in next release. Use slickGoTo method instead')
       }
@@ -95,11 +95,11 @@ class InnerSlider extends Component {
         index: nextProps.slickGoTo,
         currentSlide: this.state.currentSlide
       });
-    } else if (this.state.currentSlide >= nextProps.children.length) {
+    } else if (this.state.currentSlide >= React.Children.count(nextProps.children)) {
       this.update(nextProps);
       this.changeSlide({
         message: 'index',
-        index: nextProps.children.length - nextProps.slidesToShow,
+        index: React.Children.count(nextProps.children) - nextProps.slidesToShow,
         currentSlide: this.state.currentSlide
       });
     } else {
@@ -132,7 +132,7 @@ class InnerSlider extends Component {
   slickPrev = () => {
     this.changeSlide({ message: 'previous' });
   }
-  
+
   slickNext = () => {
     this.changeSlide({ message: 'next' });
   }
@@ -847,7 +847,7 @@ class InnerSlider extends Component {
     }
   }
   // end withHelpers
-  
+
   render() {
     var className = classnames('slick-initialized', 'slick-slider', this.props.className, {
       'slick-vertical': this.props.vertical,
